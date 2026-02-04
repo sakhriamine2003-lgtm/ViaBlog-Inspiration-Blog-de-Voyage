@@ -5,18 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="test.js"></script>
 
 </head>
 <body>
 
     <header class="flex justify-between m-6 ">
         <div> <img class="  w-[40px]" src="https://cdn-icons-png.flaticon.com/128/2976/2976215.png" alt="meni">
+          
+          
+          
           <h1 class="text-1xl font-bold mt-2">Blogger Of The Week </h1>  </div>
-        <div><img  class="w-[40px]" src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt="search"></div>
+          
+         <label for="a"class=" bg-blue-600 text-white px-4 py-5 rounded-full peer"> Entrer </label>
 
-    </header>
-     
-    <main>
+   </header>
+     <main>
+    <input type="checkbox" id="a" class="peer hidden">
+<section
+   
+    class="hidden peer-checked:block  bg-black/50 mx-auto w-[400px] rounded-[50px]
+    text-white p-4 transition-all duration-300 fixed  inset-0 flex justify-center items-center
+    ">
+
+    <h1 class="text-center my-6 text-2xl font-bold">
+      ADD DESTINATION
+    </h1>
+
+    <div class="flex flex-col gap-2 items-center">
+      <h2>Titre</h2>
+      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter le titre">
+    </div>
+
+    <div class="flex flex-col gap-2 items-center">
+      <h2>Destination</h2>
+      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter la destination">
+    </div>
+
+    <div class="flex flex-col gap-2 items-center">
+      <h2>Note</h2>
+      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter la note">
+    </div>
+
+    <div class="flex flex-col gap-2 items-center">
+      <h2>Catégorie</h2>
+      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter categorie">
+    </div>
+
+    <div class="flex flex-col gap-2 items-center">
+      <h2>Image</h2>
+      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter url de image">
+    </div>
+
+    <div  class="flex py-4 gap-4 justify-center">
+      <label  for="a" class="bg-blue-600 w-[120px] py-3
+        rounded-[30px] text-center">
+        Enregistrer
+      </label>
+
+      
+      <label for="a"
+        class=" bg-red-600 w-[120px] py-3
+        rounded-[30px] text-center">
+        Annuler
+      </label>
+    </div>
+
+  </section>
+
         <section class="flex  text-center justify-between items-center ">
             <div > 
                 <img class="w-[60%] mx-auto" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="profil 1">
@@ -42,42 +98,42 @@
         <search> <h1 class="text-2xl text-center font-bold mt-[10%]"> What Do You Want To Read ??</h1></search>
 
     <search class=" flex justify-between items-center  gap-5 mx-2 mt-[8%]"> 
-            <button class="bg-black/30 w-[18%] h-8 rounded-[10px] p-1">  All  </button>
-            <button class="bg-black/30 w-[18%] h-8 rounded-[10px] p-1" >  Forest   </button>
-            <button class="bg-black/30 w-[29%] h-8  rounded-[10px] p-1">  Beach  </button>
-            <button class="bg-black/30 w-[20%] h-8 rounded-[10px] p-1">  River   </button>
-            <button class="bg-black/30 w-[25%] h-8 rounded-[10px] p-1">  Mountains  </button>
+            <button  id="A1" class="bg-black/30 w-[18%] h-8 rounded-[10px] p-1">  All  </button>
+            <button  id="A2" class="bg-black/30 w-[18%] h-8 rounded-[10px] p-1" >  Forest   </button>
+            <button  id="A3" class="bg-black/30 w-[29%] h-8  rounded-[10px] p-1">  Beach  </button>
+            <button  id="A4" class="bg-black/30 w-[20%] h-8 rounded-[10px] p-1">  River   </button>
+            <button  id="A5" class="bg-black/30 w-[25%] h-8 rounded-[10px] p-1">  Mountains  </button>
 
 
     </search>
 
     <section class="w-full flex justify-center mt-10">
   <div class="w-[85%] max-w-4xl"><a href="PageDetail.html">
-      <img class="w-full h-[250px] object-cover rounded-t-[20px]" src="https://www.francebleu.fr/s3/cruiser-production/2022/09/1d32f6d0-a62b-4e57-aa04-35fbae69b083/1200x680_221002_-_fich_diff_homme_nature_-_westend61_-_getty.jpg" alt="image"/>
+      <img id="image" class="w-full h-[250px] object-cover rounded-t-[20px]" src="https://www.francebleu.fr/s3/cruiser-production/2022/09/1d32f6d0-a62b-4e57-aa04-35fbae69b083/1200x680_221002_-_fich_diff_homme_nature_-_westend61_-_getty.jpg" alt="image"/>
     </a>
 
     <div class="flex  justify-between items-center  gap-1
                 bg-black/30 text-white p-4 rounded-b-[20px]">
 
       <div class="">
-        <h2 class="text-sm font-bold">Yellow River</h2>
-        <h2 class="text-sm opacity-80">xxxxxx</h2>
+        <h2 id="categorie" class="text-sm font-bold">Yellow River</h2>
+        <h2 id="note" class="text-sm opacity-80">xxxxxx</h2>
       </div>
 
       <div class="flex gap-3">
         <div class="flex items-center gap-1">
           <img class="w-5" src="https://cdn-icons-png.flaticon.com/128/3082/3082577.png"  alt="logo"/>
-          <span>China</span>
+          <span id="destination">China</span>
         </div>
 
         <div class="flex items-center gap-1">
           <img class="w-5" src="https://cdn-icons-png.flaticon.com/128/709/709612.png" alt="logo"/>
-          <span>12k</span>
+          <span id="views ">12k</span>
         </div>
 
         <div class="flex items-center gap-1">
           <img class="w-5" src="https://cdn-icons-png.flaticon.com/128/439/439398.png" alt="logo"/>
-          <span>15 min</span>
+          <span id="date">15 min</span>
         </div>
       </div>
 
@@ -121,7 +177,7 @@
 
     </footer>
     
-    
+
 
 </body>
 </html>
