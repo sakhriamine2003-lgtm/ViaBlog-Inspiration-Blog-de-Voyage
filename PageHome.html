@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="test.js"></script>
+    
 
 </head>
 <body>
 
     <header class="flex justify-between m-6 ">
         <div> <img class="  w-[40px]" src="https://cdn-icons-png.flaticon.com/128/2976/2976215.png" alt="meni">
-          
           
           
           <h1 class="text-1xl font-bold mt-2">Blogger Of The Week </h1>  </div>
@@ -34,34 +33,34 @@
 
     <div class="flex flex-col gap-2 items-center">
       <h2>Titre</h2>
-      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter le titre">
+      <input type="text" class="p-2 rounded-lg w-[300px]   text-black" placeholder="Enter le titre " id="titre">
     </div>
 
-    <div class="flex flex-col gap-2 items-center">
+    <div class="flex flex-col gap-2 items-center text-black">
       <h2>Destination</h2>
-      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter la destination">
+      <input type="text" class="p-2 rounded-lg w-[300px] text-black" placeholder="Enter la destination" id="destination">
     </div>
 
     <div class="flex flex-col gap-2 items-center">
       <h2>Note</h2>
-      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter la note">
+      <input type="text" class="p-2 rounded-lg w-[300px] text-black" placeholder="Enter la note" id="note">
     </div>
 
     <div class="flex flex-col gap-2 items-center">
       <h2>Catégorie</h2>
-      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter categorie">
+      <input type="text" class="p-2 rounded-lg w-[300px] text-black" placeholder="Enter categorie" id="categorie">
     </div>
 
     <div class="flex flex-col gap-2 items-center">
       <h2>Image</h2>
-      <input type="text" class="p-2 rounded-lg w-[300px]" placeholder="Enter url de image">
+      <input type="text" class="p-2 rounded-lg w-[300px] text-black" placeholder="Enter url de image" id="image" >
     </div>
 
     <div  class="flex py-4 gap-4 justify-center">
-      <label  for="a" class="bg-blue-600 w-[120px] py-3
+      <button id="bt" class="bg-blue-600 w-[120px] py-3
         rounded-[30px] text-center">
         Enregistrer
-      </label>
+      </button>
 
       
       <label for="a"
@@ -115,8 +114,8 @@
     <div class="flex  justify-between items-center  gap-1
                 bg-black/30 text-white p-4 rounded-b-[20px]">
 
-      <div class="">
-        <h2 id="categorie" class="text-sm font-bold">Yellow River</h2>
+      <div >
+        <h2 id="titre" class="text-sm font-bold">Yellow River</h2>
         <h2 id="note" class="text-sm opacity-80">xxxxxx</h2>
       </div>
 
@@ -129,9 +128,9 @@
         <div class="flex items-center gap-1">
           <img class="w-5" src="https://cdn-icons-png.flaticon.com/128/709/709612.png" alt="logo"/>
           <span id="views ">12k</span>
-        </div>
-
-        <div class="flex items-center gap-1">
+ </div>
+       
+      <div class="flex items-center gap-1">
           <img class="w-5" src="https://cdn-icons-png.flaticon.com/128/439/439398.png" alt="logo"/>
           <span id="date">15 min</span>
         </div>
@@ -173,11 +172,11 @@
         <h1> <a href="#">xxxxxx</a></h1>
        </div>
 
-
+   
 
     </footer>
     
 
-
+<script src="test.js"></script>
 </body>
 </html>
