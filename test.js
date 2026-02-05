@@ -1,106 +1,93 @@
-// let table = [
-//   {
-//     titre: "Vacances à Paris",
-//     destination: "Paris, France",
-//     date: "2024-07-15",
-//     note: 5,
-//     categorie: "Beach",
-//     image : "https://th.bing.com/th/id/OIP.2LzIzZDD8L9Ff8FQbZD1NwHaE8?w=282&h=188&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
-//   },
-//   {
-//     titre: "Ski à Chamonix",
-//     destination: "Chamonix, France",
-//     date: "2024-01-10",
-//     note: 4,
-//     categorie: "River",
-//     image : "https://th.bing.com/th?q=Aiguilles+Rouges+Chamonix+France&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.5&pid=InlineBlock&rm=3&mkt=en-XA&cc=MA&setlang=fr&adlt=strict&t=1&mw=247"
-//   },
-//   {
-//     titre: "Plage à Bali",
-//     destination: "Bali, Indonésie",
-//     date: "2023-12-20",
-//     note: 5,
-//     categorie: "Forest",
-//     image : "https://th.bing.com/th/id/OIP.IIa-tBDZEjPPfUo1IGT_vwHaEK?w=356&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+// console.log("test");
 
+const table =[
+  {
+    titre: "Vacances à Paris",
+    destination: "Paris, France",
+    date: "2024-07-15",
+    note: 5,
+    categorie: "Beach",
+    image : "https://th.bing.com/th/id/OIP.2LzIzZDD8L9Ff8FQbZD1NwHaE8?w=282&h=188&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+  },
+  {
+    titre: "Vacances à Paris",
+    destination: "Paris, France",
+    date: "2024-07-15",
+    note: 5,
+    categorie: "Beach",
+    image : "https://th.bing.com/th/id/OIP.2LzIzZDD8L9Ff8FQbZD1NwHaE8?w=282&h=188&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+  },
+   {
+    titre: "Vacances à Paris",
+    destination: "Paris, France",
+    date: "2024-07-15",
+    note: 5,
+    categorie: "Beach",
+    image : "https://th.bing.com/th/id/OIP.2LzIzZDD8L9Ff8FQbZD1NwHaE8?w=282&h=188&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+  },
+     {
+    titre: "Vacances à Paris",
+    destination: "Paris, France",
+    date: "2024-07-15",
+    note: 5,
+    categorie: "Beach",
+    image : "https://th.bing.com/th/id/OIP.2LzIzZDD8L9Ff8FQbZD1NwHaE8?w=282&h=188&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+  }
+];
 
-//   },
-//   {
-//     titre: "Roadtrip USA",
-//     destination: "Route 66, USA",
-//     date: "2023-09-05",
-//     note: 4,
-//     categorie: "Mountains",
-//      image : "https://th.bing.com/th/id/OIP.JvyZZEc8tghQYH0ml1qe-gHaE8?w=300&h=200&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
-//   },
-//   {
-//     titre: "Safari Kenya",
-//     destination: "Nairobi, Kenya",
-//     date: "2024-03-12",
-//     note: 5,
-//     categorie: "Nature",
-//     image :"https://th.bing.com/th/id/OIP.bkXA94ilh4iWAvzQW3_mxwHaE7?w=301&h=199&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
-//   }
-// ];
-
-
-
-const table =[];
-
-
-
-const bt =document.getElementById('bt');
+const bt =document.getElementById('btt');
 
 const titre = document.getElementById('titre');
 const destination = document.getElementById('destination');
 const note = document.getElementById('note')
 const categorie = document.getElementById('categorie');
 const  image = document.getElementById('image');
+const  div =document.getElementById('id')
 
 
+bt.addEventListener("click", (e) => {
+  e.preventDefault();
 
-bt.addEventListener("click", () => {
-  let  newtable = {
-    titre: titre.value ,
+  let newtable = {
+    titre: titre.value,
     destination: destination.value,
     note: Number(note.value),
     categorie: categorie.value,
-    image :image.value  
-  }
+    image: image.value
+  };
+
   table.push(newtable);
-  
-alert("element est ajouter ");
+  console.log(table); 
 
-  titre.value = "",
-  destination.value = "",
-  note.value = "",
-  categorie.value = "",
-  image.value = ""
+  alert("L'élément a été ajouté ");
 
+  titre.value = "";
+  destination.value = "";
+  note.value = "";
+  categorie.value = "";
+  image.value = "";
 });
 
-// console.log(table);
+function CreeElement() {
+  const container = document.getElementById('containerCard');
+  container.innerHTML = '';
+  for (let i = 0; i < table.length; i++) {
+    const x = table[i];
 
-
-function AfficherInf() {
-
-  // إنشاء div جديدة
-  const card = document.createElement("div");
-
-  card.innerHTML = `
-    <h2>${titre.value}</h2>
-    <p>Destination : ${destination.value}</p>
-    <p>Note : ${note.value}</p>
-    <p>Categorie : ${categorie.value}</p>
-    <img src="${image.value}" style="width:200px">
-  `;
-
-  table.appendChild(card);
-}
-
-
-
-
+    container.innerHTML += `       
+      <div id="rr" class="w-[300px] rounded-[20px] shadow-lg  bg-white m-6">
+        <img src="${x.image}" class="w-full h-[250px]  rounded-t-[20px]">
+        <div class="p-4 text-center">
+          <h2 class="text-sm font-bold">${x.titre}</h2>
+          <p>${x.destination}</p>
+          <p class="text-sm ">${x.note}</p>
+          <p>${x.categorie}</p>
+         <button id="rmv"  class="bg-blue-600 w-[120px] py-3
+        rounded-[30px] text-white text-center"> supprimer </button>
+        </div>
+      </div>
+    `;
+}}CreeElement()
 
 
 
