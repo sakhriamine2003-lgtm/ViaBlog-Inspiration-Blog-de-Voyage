@@ -25,7 +25,7 @@ let table =[
     destination: "Paris, France",
     date: "2024-07-15",
     note: 5,
-    categorie: "Beach",
+    categorie: "River",
     image : "https://th.bing.com/th/id/OIP.2LzIzZDD8L9Ff8FQbZD1NwHaE8?w=282&h=188&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
   },
      {
@@ -34,12 +34,12 @@ let table =[
     destination: "Paris, France",
     date: "2024-07-15",
     note: 5,
-    categorie: "Beach",
+    categorie: "Mountains",
     image : "https://th.bing.com/th/id/OIP.2LzIzZDD8L9Ff8FQbZD1NwHaE8?w=282&h=188&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
   }
 ];
 
-const bt =document.getElementById('btt');
+const btt =document.getElementById('btt');
 
 const titre = document.getElementById('titre');
 const destination = document.getElementById('destination');
@@ -49,7 +49,18 @@ const  image = document.getElementById('image');
 const  div =document.getElementById('id')
 
 
-bt.addEventListener("click", (e) => {
+
+
+const All = document.getElementById('A1');
+const Forest = document.getElementById('A2');
+const Beach = document.getElementById('A3');
+const River = document.getElementById('A4');
+const Mountains = document.getElementById('A5');
+
+
+
+
+btt.addEventListener("click", (e) => {
   e.preventDefault();
 
   let newtable = {
@@ -62,7 +73,8 @@ bt.addEventListener("click", (e) => {
   };
 
   table.push(newtable);
-  console.log(table); 
+  CreeElement();
+
 
   alert("L'élément a été ajouté ");
 
@@ -73,14 +85,14 @@ bt.addEventListener("click", (e) => {
   image.value = "";
 });
 
-function CreeElement() {
+function CreeElement(data = table) {
   const container = document.getElementById('containerCard');
   container.innerHTML = '';
-  for (let i = 0; i < table.length; i++) {
-    const x = table[i];
+  for (let i = 0; i < data.length; i++) {
+    const x = data[i];
 
     container.innerHTML += `       
-      <div " class="flex flex-wrap justify-center items-center  w-[350px] rounded-[20px] shadow-lg m-7  bg-white mx card">
+      <div  class="flex flex-wrap justify-center items-center  w-[350px] rounded-[20px] shadow-lg m-7  bg-white mx card">
         <img src="${x.image}" class="w-full h-[250px]  rounded-t-[20px]">
         <div class="p-4 text-center">
           <h2 class="text-sm font-bold">${x.titre}</h2>
@@ -92,13 +104,43 @@ function CreeElement() {
         </div>
       </div>
     `;
-}}CreeElement()
-
+}}
+ CreeElement();
 
 function supprimer(id){
   table = table.filter(g=>g.id !== id)
  CreeElement(table);
 }
+
+
+A1.addEventListener("click", () => {
+  CreeElement(); 
+});
+
+A2.addEventListener("click", () => {
+  CreeElement(table.filter(g => g.categorie === "Forest"));
+});
+
+A3.addEventListener("click", () => {
+  CreeElement(table.filter(g => g.categorie === "Beach"));
+});
+
+A4.addEventListener("click", () => {
+  CreeElement(table.filter(g => g.categorie === "River"));
+});
+
+A5.addEventListener("click", () => {
+  CreeElement(table.filter(g => g.categorie === "Mountains"));
+});
+CreeElement();
+
+
+
+
+
+
+
+
 
 
 
