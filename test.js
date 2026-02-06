@@ -58,11 +58,8 @@ const River = document.getElementById('A4');
 const Mountains = document.getElementById('A5');
 
 
-
-
 btt.addEventListener("click", (e) => {
   e.preventDefault();
-
   let newtable = {
     id : table.length+1,
     titre: titre.value,
@@ -74,8 +71,7 @@ btt.addEventListener("click", (e) => {
 
   table.push(newtable);
   CreeElement();
-
-
+  
   alert("L'élément a été ajouté ");
 
   titre.value = "";
@@ -110,8 +106,8 @@ function CreeElement(data = table) {
 function supprimer(id){
   table = table.filter(g=>g.id !== id)
  CreeElement(table);
+ alert("element est supprimer ")
 }
-
 
 A1.addEventListener("click", () => {
   CreeElement(); 
@@ -119,24 +115,27 @@ A1.addEventListener("click", () => {
 
 A2.addEventListener("click", () => {
   CreeElement(table.filter(g => g.categorie === "Forest"));
+   alert("element qui est la categorie forest a afficher ")
 });
 
 A3.addEventListener("click", () => {
   CreeElement(table.filter(g => g.categorie === "Beach"));
+     alert("element qui est la categorie Beach a afficher ")
+
 });
 
 A4.addEventListener("click", () => {
   CreeElement(table.filter(g => g.categorie === "River"));
+     alert("element qui est la categorie River a afficher ")
+
 });
 
 A5.addEventListener("click", () => {
   CreeElement(table.filter(g => g.categorie === "Mountains"));
+     alert("element qui est la categorie Mountains a afficher ")
+
 });
 CreeElement();
-
-
-
-
 
 
 
